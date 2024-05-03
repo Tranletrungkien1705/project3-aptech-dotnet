@@ -1,0 +1,87 @@
+﻿@using eProject3.Repository;
+@inject IPaintingRepository paintingRepository;
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutWEB.cshtml";
+    var paintings = await paintingRepository.GetAllPublicAsync();
+}
+<div class="header-mobile">
+    <a href="index.html" class="logo"><img src="./public/vcca/images/wallpaperflare.com_wallpaper (1).jpg" alt="VCCA" /></a>
+</div>
+<main id="content" class="content-home content-about content-newmain">
+
+
+
+
+    <div class="slider-about">
+        <ul class="bxslider">
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(13\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(11\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(2\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="content-main"></div>
+        <div class="animated fade-in title-board">
+            <h2><span>Current Competitions</span></h2>
+        </div>
+
+        <div class="home-section home-exhibitions">
+            <div class="row">
+                @foreach (Painting x in paintings)
+                {
+                    <div class="col-sm-4">
+                        <div class="animated fade-in home-item">
+
+                            <img src="~/uploads/@x.FileEntity" width="" />
+                            <a href="#">
+                                <div class="info">
+                                    <h3>@x.Name</h3>
+                                    <p>@x.Description</p>
+                                    <p><i>@x.Conditions</i></p>
+                                    <p>@x.StudentId</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="animated fade-in title-board">
+                <h2><span>Upcoming Competitions</span></h2>
+            </div>
+            <div class="row">
+                <br><br>
+            </div>
+            <div class="row">
+                @foreach (Painting x in paintings)
+                {
+                    <div class="col-sm-4">
+                        <div class="animated fade-in home-item">
+
+                            <img src="~/uploads/@x.FileEntity" width="" />
+                            <a href="#">
+                                <div class="info">
+                                    <h3>@x.Name</h3>
+                                    <p>@x.Description</p>
+                                    <p><i>@x.Conditions</i></p>
+                                    <p>@x.StudentId</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</main>

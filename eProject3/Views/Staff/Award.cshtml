@@ -1,0 +1,139 @@
+﻿@model IPagedList<eProject3.Models.Award>;
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@using eProject3.Repository;
+@inject IAwardRepository award
+@inject IStudentRepository studentRepository;
+@inject ICompetitionRepository competitionRepository;
+@inject IPaintingInCompRepository paintingInCompRepository;
+@inject IPaintingRepository paintingRepository;
+@{
+    ViewData["Title"] = "Current Competitions";
+    Layout = "~/Views/Shared/_LayoutStaff.cshtml";
+}
+<div class="header-mobile">
+    <a href="index.html" class="logo"><img src="~/public/vcca/images/wallpaperflare.com_wallpaper (1).jpg" alt="VCCA" /></a>
+</div>
+<main id="content" class="content-home content-about content-newmain">
+
+
+
+
+    <div class="slider-about">
+        <ul class="bxslider">
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(13\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(11\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(2\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="content-main"></div>
+        <div class="animated fade-in title-board">
+            <h2><span>Awards</span></h2>
+        </div>
+
+        <div class="home-section home-exhibitions">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="intro">
+                        <div class="bg-image h-100" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/tables/img2.jpg');">
+                            <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0,0,0,.25);">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-12">
+                                            <div class="card bg-dark shadow-2-strong">
+                                                <div class="card-body">
+                                                    <div>
+                                                        @*<button id="openModalBtn" class="btn btn-primary btn-lg text-white mb-0 me-0" type="button"><i class="mdi mdi-account-plus"></i>Add New Students</button>*@
+                                                        <a href="AddOrUpdateAward"><button class="btn btn-primary btn-lg text-white mb-0 me-0" id="addButton" <i class="mdi mdi-account-plus"></i>Add New Award</button></a>
+                                                    </div>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-dark table-borderless mb-0">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">ID</th>
+                                                                    <th scope="col">Name</th>
+                                                                    <th scope="col">Awar Day</th>
+                                                                    <th scope="col">Remarks Of Competition</th>
+                                                                    <th scope="col">Student's Name</th>
+                                                                    <th scope="col">Competition's Name</th>
+                                                                    <th>Edit</th>
+                                                                    <th>Delete</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                @foreach (Award x in Model)
+                                                                {
+                                                                    <tr>
+                                                                        <th>@x.Id</th>
+                                                                        <th>@x.Name</th>
+                                                                        <td>@x.AwardDay</td>
+                                                                        <td>@x.RemarksOfCompetion</td>
+                                                                        <th>
+                                                                            @studentRepository.GetByIdAsync((int)paintingRepository.GetByIdAsync((int)x.PaintingInCompId).GetAwaiter().GetResult().StudentId).GetAwaiter().GetResult().Name
+                                                                        </th>
+                                                                        <th>@competitionRepository.GetByIdAsync((int)paintingInCompRepository.GetByIdAsync((int)x.PaintingInCompId).GetAwaiter().GetResult().CompetitionId).GetAwaiter().GetResult().Name</th>
+
+                                                                        <td>
+                                                                            <a href="AddOrUpdateAward/@x.Id"><button class="btn btn-success" value="@x.Id">Edit</button></a>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="javascript:void(0);" onclick="deleteStudent(@x.Id)"><button class="btn btn-success" value="">Delete</button></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                }
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        @Html.PagedListPager(Model, page=>Url.Action("Award",new{page}))
+        <script>
+            function deleteStudent(id) {
+                if (confirm('Are you sure you want to delete this one?')) {
+                    $.ajax({
+                        url: '/Staff/DeleteAwardAsync/' + id,
+                        type: 'GET',
+                        success: function (result) {
+                            // Xử lý kết quả thành công
+                            alert('Completely deleted successfully');
+                            // Thực hiện các hành động khác sau khi xóa thành công
+                            window.location.href = '/Staff/Award';
+                        },
+                        error: function (xhr, status, error) {
+                            // Xử lý lỗi
+                            alert('Error deleting this one');
+                        }
+                    });
+                }
+            }
+        </script>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+</main>

@@ -1,0 +1,104 @@
+﻿@model IPagedList<eProject3.Models.Competition>;
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@using eProject3.Repository;
+@inject ICompetitionRepository competitionRepo
+@{
+    ViewData["Title"] = "Competition";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+<body>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="home-tab">
+                                <div class="d-sm-flex align-items-center justify-content-between border-bottom"></div>
+                                <div class="tab-content tab-content-basic">
+                                    <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
+                                        <div class="row">
+                                            <div class="col-12 grid-margin stretch-card">
+                                                <div class="card card-rounded">
+                                                    <div class="card-body">
+                                                        <div class="d-sm-flex justify-content-between align-items-start">
+                                                            <div>
+                                                                <h4 class="card-title card-title-dash">Competitions Information</h4>
+                                                            </div>
+                                                           
+                                                        </div>
+                                                        <div class="table-responsive  mt-1">
+                                                            <table class="table select-table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Id</th>
+                                                                        <th>Name</th>
+                                                                        <th>Start Of Date</th>
+                                                                        <th>End Of Date</th>
+                                                                        <th>Description</th>
+                                                                        <th>Condition</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    @foreach (Competition x in Model)
+                                                                    {
+                                                                            <tr>
+                                                                                <td>@x.Id</td>
+                                                                                <td>
+                                                                                    <div>
+                                                                                        <h6>@x.Name</h6>
+
+                                                                                    </div>
+
+                                                                                </td>
+                                                                                <td>
+                                                                                    <h6>@x.StartOfDate</h6>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <h6>@x.EndOfDate</h6>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <h6>@x.Description</h6>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <h6>@x.Conditions</h6>
+                                                                                </td>
+                                                                            </tr>
+                                                                    }
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                        
+                                        <!-- </div> -->
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    @Html.PagedListPager(Model, page=>Url.Action("Competition",new{page}))
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:partials/_footer.html -->
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash.</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    
+</body>
+
+
+

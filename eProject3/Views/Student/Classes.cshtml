@@ -1,0 +1,106 @@
+﻿@model IPagedList<eProject3.Models.Class>;
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@using eProject3.Repository;
+@inject IClassRepository award
+@{
+    ViewData["Title"] = "Student's Classes";
+    Layout = "~/Views/Shared/_LayoutStudent.cshtml";
+}
+<div class="header-mobile">
+    <a href="index.html" class="logo"><img src="~/public/vcca/images/wallpaperflare.com_wallpaper (1).jpg" alt="VCCA" /></a>
+</div>
+<main id="content" class="content-home content-about content-newmain">
+
+
+
+
+    <div class="slider-about">
+        <ul class="bxslider">
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(13\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(11\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(2\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="content-main"></div>
+        <div class="animated fade-in title-board">
+            <h2><span>Awards</span></h2>
+        </div>
+
+        <div class="home-section home-exhibitions">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="intro">
+                        <div class="bg-image h-100" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/tables/img2.jpg');">
+                            <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0,0,0,.25);">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-12">
+                                            <div class="card bg-dark shadow-2-strong">
+                                                <div class="card-body">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-dark table-borderless mb-0">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">ID</th>
+                                                                    <th scope="col">Name</th>
+                                                                    <th scope="col">Start Of Date:</th>
+                                                                    <th scope="col">End Of Date</th>
+                                                                    <th>Student In Sub</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                @if (Model != null)
+                                                                {
+                                                                    @foreach (Class x in Model)
+                                                                    {
+                                                                        <tr>
+                                                                            <th>@x.Id</th>
+                                                                            <th>@x.Name</th>
+                                                                            <td>@x.StartOfDate</td>
+                                                                            <td>@x.EndOfDate</td>
+                                                                            <td>
+                                                                                <a href="/Student/StudentInSub/@x.Id"><button class="btn btn-success">View</button></a>
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    }
+                                                                }
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        @Html.PagedListPager(Model, page=>Url.Action("Class",new{page}))
+        <script>
+        </script>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+</main>

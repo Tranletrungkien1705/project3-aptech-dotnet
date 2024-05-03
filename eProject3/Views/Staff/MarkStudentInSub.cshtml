@@ -1,0 +1,45 @@
+﻿@model eProject3.Models.StudentInSub;
+@using eProject3.Models;
+@{
+    var MarkOfStuInSub = ViewBag.MarkOfStuInSubS as List<String>;
+    var x = new StudentInSub();
+    @if (Model != null)
+    {
+        x = Model;
+    }
+
+}
+
+
+    <div class="modal-dialog">
+        @if(1+1==2){
+
+            var id = x.Id;
+            var descripption = x.Descripption;
+        <form class="modal-content" method="POST" action="/Staff/DoMarkStudent">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                    <input type="text" id="Id" name="Id" value="@id" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="Descripption">Descripption:</label>
+                    <div>
+                        @foreach (var item in MarkOfStuInSub)
+                        {
+                            <label for="Descripption">@item</label>
+                            <input type="radio" name="Descripption" value="@item"@* @(item.Equals((string)MarkOfPain.Mark) ? "checked":"")*@ />
+                        }
+                    </div>
+                </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        }
+</div>

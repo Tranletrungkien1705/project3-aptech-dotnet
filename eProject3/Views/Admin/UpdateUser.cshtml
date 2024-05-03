@@ -1,0 +1,50 @@
+﻿@model eProject3.Models.CustomUser;
+@using eProject3.Models;
+@{
+    var x = new CustomUser();
+    @if (Model != null)
+    {
+        x = Model;
+    }
+
+}
+
+
+    <div class="modal-dialog">
+        @if(1+1==2){
+
+            var id = x.Id;
+            var name = x.UserName;
+            var email = x.Email;
+            var phoneNumber = x.PhoneNumber;
+            <form class="modal-content"  method="POST" action="/Admin/DoUpdateUser">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="Id">Id:</label>
+                    <input type="text" id="Id" name="Id" value="@id" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="UserName">UserName:</label>
+                        <input type="text" class="form-control" id="UserName" name="UserName" value="@name">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email:</label>
+                        <input type="email" class="form-control" id="Email" name="Email" value="@email">
+                    </div
+                    <div class="form-group">
+                        <label for="PhoneNumber">PhoneNumber:</label>
+                        <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" value="@phoneNumber">
+                    </div>
+                <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        }
+</div>

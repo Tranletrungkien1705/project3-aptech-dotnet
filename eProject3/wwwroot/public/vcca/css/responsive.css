@@ -1,0 +1,1085 @@
+@media screen and (min-width:1366px){
+	.content-about .board-about {
+		margin: 10px 0 40px;
+	}
+	.content-main{
+		padding: 100px 15px 30px;
+	}
+	.home-section {
+		margin: 0 0 40px;
+	}
+	#footer h3{
+		margin: 0 0 15px;
+	}
+	#footer .inner-footer {
+		margin-left: 250px;
+	}
+	.footer-address {
+		padding-top: 40px;
+	}
+	.header-bottom h1{
+		line-height: 25px;
+	}
+	.footer-address p{
+		font-size: 12px;
+	}
+	#footer .footer-address .back-top{
+		top: 0;
+	}
+	.home-title h2{
+		font-size: 30px;
+	}
+	.home-event .home-title span{
+		font-size: 14px;
+	}
+	.title-inline p {
+		font-size: 16px;
+	}
+	.home-title p.date, .home-item .info p.date {
+		font-size: 14px;
+	}
+	.content-about .slider-about {
+		height: 550px;
+	}
+	.content-about .title-statement h2{
+		font-size: 40px;
+	}
+	.content-about .title-statement h2{
+		height: 90px;
+		overflow: hidden;
+	}
+	.content-about .title-statement{
+		padding: 65px 10px 40px;
+	}
+	.mission-statement{
+		padding-top: 20px;
+	}
+	.content-about .mission-statement .dec-statement p, .content-about .dec-board p{
+		font-size: 16px;
+	}
+	.partners-about{
+		padding: 40px 0;
+	}
+	.title-board span {
+		font-size: 30px;
+		top: -25px;
+	}
+	.facility-item .info p{
+		font-size: 16px;
+	}
+	.title-board{
+		margin: 50px 0;
+	}
+	 .content-education .name-board.name-new-top h3{
+		 font-size: 40px;
+	 }
+	 .content-education .name-board.name-new-top p{
+		 font-size: 16px;
+	 }
+	 .content-education .list-news{
+		 margin-top: 125px;
+	 }
+	 .content-newmain .list-news .new-item .dec-new{
+		 font-size: 16px;
+	 }
+	 .content-newmain .list-news .new-item .date-new {
+		font-size: 14px;
+	}
+	.content-newmain .list-news .new-item{
+		margin-bottom: 40px;
+	}
+	.content-newmain .list-news .new-item .title-new{
+		margin: 30px 0 10px;
+	}
+	.content-calender .name-board.name-new-top > h3{
+		font-size: 24px;
+		line-height: 30px;
+		margin: 10px 0;
+	}
+	.content-about.content-calender .name-board{
+		max-width: 318px;
+	}
+	.content-calender .dec-calendar-item p, .content-calender .more-calendar a{
+		font-size: 16px;
+	}
+	.content-newmain .name-board.name-new-top h3{
+		font-size: 24px;
+		line-height: 30px;
+	}
+	.content-newsite .name-board.name-new-top h3{
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.content-newmain .name-board.name-new-top p, .content-newsite .name-board.name-new-top p, .content-newmain .list-news .new-item .dec-new{
+		font-size: 14px;
+	}
+	.content-newmain .list-news .new-item .title-new{
+		font-size: 24px;
+	}
+	.content-calender .dec-calendar-item h2{
+		font-size: 24px;
+	}
+	.content-newmain .list-news{
+		margin-top: 100px;
+	}
+	.content-newsite .name-board.name-new-top{
+		max-width: 568px;
+	}
+	.content-newsite .details-newsite{
+		font-size: 16px;
+	}
+	.content-newsite .share-news {
+		margin: 76px 0 150px;
+	}
+	.content-newsite .new-other-item .title-new{
+		font-size: 24px;
+	}
+	.content-visitus .title-visit{
+		font-size: 35px;
+	}
+	.content-visitus .address-map{
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.content-visitus .list-hours {
+		padding: 120px 0 80px;
+	}
+	.content-visitus .item-hour{
+		font-size: 25px;
+		height: 60px;
+	}
+	.content-visitus .list-trasportation{
+		padding: 130px 0 100px;
+	}
+	.content-visitus .title-trasportation-item{
+		font-size: 25px;
+	}
+	.content-visitus .dec-trasportation p{
+		font-size: 16px;
+	}
+	.content-newsite .details-newsite{
+		margin: 70px 0 30px;
+	}
+	.content-home-main{
+		background-image: none;
+	}
+	.header-bottom h1{
+		font-size: 16px;
+	}
+	.menu-main > ul > li > a{
+		font-size: 18px;
+	}
+	#footer h3{
+		font-size: 18px;
+	}
+	.home-item .info h3{
+		font-size: 18px;
+	}
+}
+@media screen and (min-width:1400px){
+	.menu-main > ul > li > a{
+		font-size: 20px;
+	}
+	.home-title h2{
+		font-size: 35px;
+	}
+	.home-event .home-title span{
+		font-size: 18px;
+	}
+	.header-bottom h1{
+		font-size: 20px;
+	}
+	#footer h3{
+		font-size: 20px;
+	}
+	.menu-main > ul > li > a{
+		font-size: 18px;
+	}
+	#header .menu-main{
+		margin: 65px 0 50px;
+	}
+	.content-about .board-about {
+		margin: 40px 0 70px;
+	}
+	.menu-main ul ul li a{
+		font-size: 18px;
+	}
+	#footer h3{
+		margin: 0 0 15px;
+	}
+	#footer .inner-footer {
+		margin-left: 250px;
+	}
+	.footer-address {
+		padding-top: 40px;
+	}
+	#footer .footer-address .back-top{
+		top: 0;
+	}
+	.home-title h2{
+		font-size: 35px;
+	}
+	.title-inline p {
+		font-size: 18px;
+	}
+	.home-title p.date, .home-item .info p.date {
+		font-size: 14px;
+	}
+	.content-about .slider-about {
+		height: 550px;
+	}
+	.content-about .title-statement h2{
+		font-size: 40px;
+	}
+	.content-about .title-statement h2{
+		height: 90px;
+		overflow: hidden;
+	}
+	.content-about .title-statement{
+		padding: 65px 10px 40px;
+	}
+	.mission-statement{
+		padding-top: 20px;
+	}
+	.content-about .mission-statement .dec-statement p, .content-about .dec-board p{
+		font-size: 16px;
+	}
+	.partners-about{
+		padding: 40px 0;
+	}
+	.facility-item .info p{
+		font-size: 16px;
+	}
+	 .content-education .name-board.name-new-top h3{
+		 font-size: 40px;
+	 }
+	 .content-education .name-board.name-new-top p{
+		 font-size: 16px;
+	 }
+	 .content-education .list-news{
+		 margin-top: 125px;
+	 }
+	 .content-newmain .list-news .new-item .dec-new{
+		 font-size: 16px;
+	 }
+	 .content-newmain .list-news .new-item .date-new {
+		font-size: 14px;
+	}
+	.content-newmain .list-news .new-item{
+		margin-bottom: 40px;
+	}
+	.content-newmain .list-news .new-item .title-new{
+		margin: 30px 0 10px;
+	}
+	.content-calender .name-board.name-new-top > h3{
+		font-size: 30px;
+		line-height: 30px;
+		margin: 10px 0;
+	}
+	.content-about.content-calender .name-board{
+		max-width: 318px;
+	}
+	.content-calender .dec-calendar-item p, .content-calender .more-calendar a{
+		font-size: 16px;
+	}
+	.content-newmain .name-board.name-new-top h3{
+		font-size: 30px;
+		line-height: 30px;
+	}
+	.content-newsite .name-board.name-new-top h3{
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.content-newmain .name-board.name-new-top p, .content-newsite .name-board.name-new-top p{
+		font-size: 16px;
+	}
+	.content-newmain .list-news{
+		margin-top: 100px;
+	}
+	.content-newsite .name-board.name-new-top{
+		max-width: 568px;
+	}
+	.content-newsite .details-newsite{
+		font-size: 16px;
+	}
+	.content-newsite .share-news {
+		margin: 76px 0 150px;
+	}
+	.content-newsite .new-other-item .title-new{
+		font-size: 24px;
+	}
+	.content-visitus .title-visit{
+		font-size: 35px;
+	}
+	.content-visitus .address-map{
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.content-visitus .list-hours {
+		padding: 120px 0 80px;
+	}
+	.content-visitus .item-hour{
+		font-size: 25px;
+		height: 60px;
+	}
+	.content-visitus .list-trasportation{
+		padding: 130px 0 100px;
+	}
+	.content-visitus .title-trasportation-item{
+		font-size: 25px;
+	}
+	.content-visitus .dec-trasportation p{
+		font-size: 16px;
+	}
+	.content-newsite .details-newsite{
+		margin: 70px 0 30px;
+	}
+}
+@media screen and (min-width:1600px){
+	#footer h3{
+		font-size: 21px;
+	}
+	.title-board span {
+		font-size: 40px;
+		top: -32px;
+	}
+	.content-education .name-board.name-new-top h3 {
+		font-size: 31px;
+	}
+	.content-main{
+		padding: 130px 15px 30px;
+	}
+	.title-board span {
+		font-size: 40px;
+		top: -32px;
+	}
+	.content-education .name-board.name-new-top h3{
+		font-size: 31px;
+		line-height:38px;
+	}
+	.content-newmain .name-board.name-new-top p, .content-newsite .name-board.name-new-top p{
+		font-size: 14px;
+	}
+	.content-newmain .name-board.name-new-top p, .content-newsite .name-board.name-new-top p, .content-newmain .list-news .new-item .dec-new{
+		font-size: 14px;
+	}
+	.content-newmain .list-news .new-item .title-new {
+		font-size: 25px;
+		line-height:30px;
+	}
+	.home-section {
+		margin: 0 0 70px;
+	}
+	.menu-main > ul > li > a{
+		font-size: 20px;
+	}
+	.menu-main > ul > li {
+		margin-bottom: 20px;
+	}
+	.menu-main > ul > li {
+		margin-bottom: 20px;
+	}
+	.home-title p.date, .home-item .info p.date {
+		font-size: 12px;
+	}
+	.home-item .info h3 {
+		font-size: 24px;
+	}
+	#footer h3{
+		margin: 0 0 15px;
+	}
+	.home-event .home-title span {
+		font-size: 16px;
+	}
+	#footer .inner-footer {
+		margin-left: 250px;
+	}
+	.footer-address {
+		padding-top: 40px;
+	}
+	#footer .footer-address .back-top{
+		top: 0;
+	}
+	.home-title h2{
+		font-size: 40px;
+	}
+	.title-inline p {
+		font-size: 18px;
+	}
+	.home-title p.date, .home-item .info p.date {
+		font-size: 14px;
+	}
+	.content-about .slider-about {
+		height: 550px;
+	}
+	.content-about .title-statement h2{
+		font-size: 45px;
+	}
+	.content-about .title-statement h2{
+		height: 100px;
+		overflow: hidden;
+	}
+	.content-about .title-statement{
+		padding: 65px 10px 40px;
+	}
+	.mission-statement{
+		padding-top: 20px;
+	}
+	.content-about .mission-statement .dec-statement p, .content-about .dec-board p{
+		font-size: 16px;
+	}
+	.partners-about{
+		padding: 40px 0;
+	}
+	.facility-item .info p{
+		font-size: 16px;
+	}
+	.title-board{
+		margin: 60px 0 80px;
+	}
+	 .content-newmain .list-news .new-item .date-new {
+		font-size: 14px;
+	}
+	.content-newmain .list-news .new-item{
+		margin-bottom: 40px;
+	}
+	.content-newmain .list-news .new-item .title-new{
+		margin: 30px 0 10px;
+	}
+	.content-about.content-calender .name-board{
+		max-width: 318px;
+	}
+	.content-calender .dec-calendar-item p, .content-calender .more-calendar a{
+		font-size: 16px;
+	}
+	.content-newsite .name-board.name-new-top h3{
+		font-size: 35px;
+		line-height: 45px;
+	}
+	.content-newmain .name-board.name-new-top p, .content-newsite .name-board.name-new-top p{
+		font-size: 16px;
+	}
+	.content-newmain .list-news{
+		margin-top: 130px;
+	}
+	.content-newsite .name-board.name-new-top{
+		max-width: 568px;
+	}
+	.content-newsite .details-newsite{
+		font-size: 16px;
+	}
+	.content-newsite .new-other-item .title-new{
+		font-size: 24px;
+	}
+	.content-visitus .title-visit{
+		font-size: 40px;
+	}
+	.content-visitus .dec-trasportation p{
+		font-size: 16px;
+	}
+}
+ @media screen and (min-width:1920px){
+	.menu-main > ul > li > a{
+		font-size: 22px;
+	}
+	.content-home.content-home-main .home-item .info h3{
+		font-size: 30px;
+	}
+	.content-home.content-home-main .home-item .info p{
+		font-size: 18px;
+	}
+	.content-home.content-home-main .home-item .info p.date{
+		font-size: 14px;
+	}
+	#header .menu-main{
+		margin: 160px 0 50px;
+	}
+	.menu-main ul ul li a{
+		font-size: 18px;
+	}
+	.content-main{
+		padding: 160px 15px 30px;
+	}
+	.home-section {
+		margin: 0 0 70px;
+	}
+	#footer h3{
+		margin: 0 0 15px;
+	}
+	#footer .inner-footer {
+		margin-left: 250px;
+	}
+	.footer-address {
+		padding-top: 40px;
+	}
+	#footer .footer-address .back-top{
+		top: 0;
+	}
+	.home-title h2{
+		font-size: 48px;
+	}
+	.title-inline p {
+		font-size: 18px;
+	}
+	.home-title p.date, .home-item .info p.date {
+		font-size: 14px;
+	}
+	.content-about .slider-about {
+		height: 550px;
+	}
+	.content-about .title-statement h2{
+		font-size: 48px;
+	}
+	.content-about .title-statement h2{
+		height: 108px;
+		overflow: hidden;
+	}
+	.content-about .title-statement{
+		padding: 65px 10px 40px;
+	}
+	.mission-statement{
+		padding-top: 20px;
+	}
+	.content-about .mission-statement .dec-statement p, .content-about .dec-board p{
+		font-size: 16px;
+	}
+	.partners-about{
+		padding: 40px 0;
+	}
+	.title-board span{
+		font-size: 48px;
+		top: -40px;
+	}
+	.facility-item .info p{
+		font-size: 16px;
+	}
+	.title-board{
+		margin: 60px 0 80px;
+	}
+	 .content-education .name-board.name-new-top h3{
+		 font-size: 40px;
+	 }
+	 .content-education .name-board.name-new-top p{
+		 font-size: 16px;
+	 }
+	 .content-education .list-news{
+		 margin-top: 125px;
+	 }
+	 .content-newmain .list-news .new-item .dec-new{
+		 font-size: 16px;
+	 }
+	 .content-newmain .list-news .new-item .date-new {
+		font-size: 14px;
+	}
+	.content-newmain .list-news .new-item{
+		margin-bottom: 40px;
+	}
+	.content-newmain .list-news .new-item .title-new{
+		margin: 30px 0 10px;
+	}
+	.content-about.content-calender .name-board{
+		max-width: 318px;
+	}
+	.content-calender .dec-calendar-item p, .content-calender .more-calendar a{
+		font-size: 16px;
+	}
+	.content-newmain .name-board.name-new-top h3{
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.content-newsite .name-board.name-new-top h3{
+		font-size: 40px;
+		line-height: 50px;
+	}
+	.content-newmain .name-board.name-new-top p, .content-newsite .name-board.name-new-top p{
+		font-size: 16px;
+	}
+	.content-newmain .list-news{
+		margin-top: 130px;
+	}
+	.content-newsite .name-board.name-new-top{
+		max-width: 568px;
+	}
+	.content-newsite .details-newsite{
+		font-size: 16px;
+	}
+	.content-newsite .share-news {
+		margin: 76px 0 200px;
+	}
+	.content-newsite .new-other-item .title-new{
+		font-size: 24px;
+	}
+	.content-visitus .title-visit{
+		font-size: 48px;
+	}
+	.content-visitus .address-map{
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.content-visitus .list-hours {
+		padding: 170px 0 120px;
+	}
+	.content-visitus .item-hour{
+		font-size: 36px;
+		height: 88px;
+	}
+	.content-visitus .list-trasportation{
+		padding: 150px 0 100px;
+	}
+	.content-visitus .title-trasportation-item{
+		font-size: 30px;
+	}
+	.content-visitus .dec-trasportation p{
+		font-size: 16px;
+	}
+}
+@media screen and (max-width:1280px){
+	#header{
+		padding: 20px 30px;
+	}
+	#header .menu-main {
+		margin: 50px 0 50px;
+	}
+	.content-main {
+		padding: 45px;
+	}
+	.content-about .content-main{
+		padding: 100px 45px 45px;
+	}
+	.home-title h2{
+		font-size: 30px;
+	}
+	.title-inline p {
+		font-size: 14px;
+	}
+	.home-item .info h3{
+		font-size: 18px;
+	}
+	.info > p {
+		font-size: 12px;
+	}
+	#footer h3{
+		font-size: 16px;
+	}
+	.title-board span{
+		font-size: 30px;
+		top: -26px;
+	}
+	.content-newmain .name-board.name-new-top h3, .content-newsite .name-board.name-new-top h3{
+		font-size: 24px;
+	}
+	.content-newmain .name-board.name-new-top p, .content-newsite .name-board.name-new-top p{
+		font-size: 16px;
+	}
+	.content-newmain .list-news .new-item .title-new{
+		font-size: 24px;
+	}
+	.content-calender .dec-calendar-item h2, .content-calender .name-board.name-new-top > h3{
+		font-size: 24px;
+	}
+}
+@media screen and (max-width:1279px){
+	.content-home-main{
+		background-image: none;
+	}
+	.text-right {
+		display: none;
+	}
+	.header-mobile{
+		display: block;
+		position:fixed;
+		top:0;
+		left:0;
+		right:0;
+		z-index:9;
+	}
+	#header{	
+		bottom: 0;
+		left: 0;
+		position: fixed;
+		top: 0;
+		transform: translateX(-100%);
+		-webkit-transform: translateX(-100%);
+		transition: all 0.3s ease-in-out 0s;
+		-moz-transition: all 0.3s ease-in-out 0s;
+		-o-transition: all 0.3s ease-in-out 0s;
+		-webkit-transition: all 0.3s ease-in-out 0s;
+		-ms-transition: all 0.3s ease-in-out 0s;
+		z-index: 99;
+	}
+	.toogle-menu{
+		display: block;
+		top: 18px;
+		left: 23px;
+	}
+	#content, #footer .inner-footer{
+		margin-left: 0;
+	}
+	.footer-address-mobile, #footer .footer-address.footer-address-mobile .back-top{
+		display: block;
+	}
+	#footer .footer-address .back-top{
+		display: none;
+	}
+	.left-footer{
+		width: 50%;
+		float: left;
+	}
+	.inner-footer .col-sm-1{
+		width: 10%;
+		float: left;
+	}
+	.center-footer{
+		width: 40%;
+		float: left;
+	}
+	.text-right{
+		width: 100%;
+		float: left;
+	}
+	.footer-address {
+		margin-top: 30px;
+		text-align: left;
+	}
+	#subForm input[type="text"] {
+		font-size: 16px;
+		height: 35px;
+	}
+	#subForm p {
+		margin-right: 0;
+	}
+	#subForm input[type="submit"] {
+		font-size: 16px;
+		padding: 10px 15px;
+		position: static;
+		margin-top: 20px;
+	}
+	.home-section .col-sm-4{
+		margin-bottom: 50px;
+	}
+	.mission-statement .col-sm-4{
+		height: 50px;
+	}
+	.mission-statement  .dec-statement{
+		width: 100%;
+		margin: 30px 0;
+	}
+	.partners-about{
+		margin-bottom: 30px;
+	}
+	.content-about .new-top .name-board{
+		background: none;
+		position: static;
+		margin-top: 30px;
+	}
+	.content-newmain .name-board.name-new-top{
+		max-width: 100%;
+	}
+	.content-newmain .name-board.name-new-top{
+		padding: 15px 0;
+	}
+	.content-about .new-top .thumbnail-about .img-big-news::before {
+		background: #a0a0a0;
+		bottom: -30px;
+		content: "";
+		height: 50px;
+		left: -30px;
+		position: absolute;
+		width: 40%;
+		z-index: 9999;
+	}
+	.row.list-news{
+		margin-top: 30px;
+	}
+	.content-newsite .details-newsite {
+		margin: 60px 0 30px;
+		padding: 0;
+		text-align: justify;
+	}
+	.content-visitus .address-map{
+		margin: 30px 0;
+	}
+	.content-about .name-board{
+		left: -30px;
+	}
+	.facility-item span{
+		font-size: 24px;
+	}
+} 
+
+@media screen and (max-width:768px) {
+	.mission-statement .col-sm-4 .title-statement {
+		width: 40%;
+		margin-bottom: 30px;
+	}
+	.mission-statement .col-sm-4{
+		width: 100%;
+	}
+	.content-about .title-statement h2{
+		font-size: 32px;
+	}
+	.home-section .col-sm-4 {
+		float: left;
+		width: 50%;
+		margin-bottom: 30px;
+	}
+	.home-section {
+		margin: 0;
+	}
+	.subscribe-form {
+		margin-bottom: 10px;
+	}
+	.content-about .board-about, .content-about .netword-about{
+		margin: 30px 0;
+	}
+	.content-about .thumbnail-about{
+		margin-bottom: 75px;
+	}
+	.title-board, .content-about .netword-about .title-board{
+		margin-bottom: 20px;
+	}
+	.content-about .netword-item.col-sm-4{
+		float: left;
+		margin-bottom: 20px;
+		width: 50%;
+	}
+	.content-about .content-main{
+		padding: 100px 45px 30px;
+	}
+	.content-newmain .list-news .new-item, .facility-list .grid-item{
+		width: 50%;
+	}
+	.facility-item .info p{
+		margin: 0 0 10px;
+		height: auto;
+		font-size: 16px;
+	}
+	.facility-item span{
+		font-size: 25px;
+	}
+	.content-calender .left-calendar, .content-calender .right-calendar{
+		width: 50%;
+		float: left;
+	}
+	.content-calender .calendar-item{
+		margin-bottom: 30px;
+	}
+	.content-about .thumbnail-about{
+		margin-bottom: 0;
+	}
+	.content-calender .calendar-item{
+		margin-bottom: 50px;
+	}
+	.dec-calendar-item {
+		height: 331px;
+		overflow: hidden;
+	}
+	.content-calender .more-calendar a{
+		margin-top: 10px;
+	}
+	.board-about .col-sm-4{
+		width: 100%;
+	}
+	.board-about .dec-board{
+		width: 100%;
+		margin-top: 60px;
+	}
+	.title-board h3{
+		height: 20px;
+	}
+	.content-about .name-board{
+		width: 80%;
+	}
+	.title-board span {
+		font-size: 25px;
+		top: -19px;
+	}
+	.content-calender .left-calendar, .content-calender .right-calendar{
+		width: 100%;
+	}
+	.content-calender .right-calendar{
+		padding-top: 50px;
+	}
+	.content-calender .more-calendar{
+		text-align: left;
+	}
+	.dec-calendar-item{
+		height: auto;
+	}
+	.content-calender .more-calendar a{
+		margin-left: 0;
+		margin-right: 10px;
+	}
+	.content-about .name-board{
+		width: 100%;
+	}
+	.content-about .newsite-top .thumbnail-about .img-big-news::before, .content-about.content-calender .left-calendar .thumbnail-about .img-big-news::before {
+		background: #a0a0a0;
+		bottom: -30px;
+		content: "";
+		height: 50px;
+		left: -30px;
+		position: absolute;
+		width: 40%;
+		z-index: 99;
+	}
+	.content-about .newsite-top .name-board, .content-about.content-calender .name-board{
+		background: none;
+		position: static;
+		margin-top: 30px;
+		max-width: 80%;
+		padding-left: 0;
+	}
+	.content-calender .right-calendar{
+		padding-top: 0;
+	}
+	.content-newsite .details-newsite{
+		margin: 10px 0 30px;
+	}
+	.content-visitus .title-visit{
+		position: static;
+		margin-bottom: 30px;
+	}
+	.content-visitus .list-map .title-visit{
+		margin-left: 20px;
+	}
+	.content-visitus .left-map, .content-visitus .right-map{
+		width: 100%;
+	}
+	.content-visitus .left-map img{
+		width: 100%;
+	}
+	.hours-opening{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.content-visitus .item-hour{
+		margin-bottom: 20px;
+	}
+	.content-visitus .list-hours{
+		padding: 20px 0 0;
+	}
+	.list-hours .animated.fade-in.col-sm-6.fadeInUp{
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	.content-visitus .list-trasportation{
+		padding-top: 0;
+	}
+	.list-trasportation .animated.fade-in.col-sm-4.fadeInUp, .item-trasportation .picture-thumbnail .img-thumbnail-transportation img{
+		width: 100%;
+	}
+	.content-visitus .img-trasportation{
+		bottom: -10%;
+	}
+	.content-visitus .picture-thumbnail{
+		margin-bottom: 70px;
+	}
+	.name-board.name-new-top > h3{
+		margin: 0;
+	}
+	.content-main {
+		padding:15px 0;
+	}
+}
+@media screen and (max-width:460px) {
+	.home-section .col-sm-4{
+		width: 100%;
+	}
+	.content-about .name-board{
+		padding: 10px 15px;
+	} 
+	.content-about .name-board h4 {
+		font-size: 14px;
+		line-height: 16px;
+	}
+	.mission-statement .col-sm-4 .title-statement {
+		width: 50%;
+		margin-bottom: 30px;
+		padding: 43px 15px;
+		top: -94px;
+	}
+	.content-about .title-statement h2{
+		font-size: 18px;
+	}
+	.facility-item .info p{
+		font-size: 12px;
+	}
+	.facility-item span{
+		font-size: 16px;
+	}
+	.facility-list .grid-item, .animated.fade-in.col-sm-4.new-item.fadeInUp{
+		width: 100%;
+	}
+	.name-board.name-new-top > h3{
+		font-size: 18px;
+		margin: 0;
+	}
+	.content-newmain .name-board.name-new-top h3, .content-newsite .name-board.name-new-top h3{
+		font-size: 20px;
+		line-height: 22px;
+	}
+	.content-about .thumbnail-about .img-big-news::after, 
+	.content-about .thumbnail-about .img-big-news::before,
+	.content-about .newsite-top .thumbnail-about .img-big-news::before,
+	.content-about.content-education .new-top .thumbnail-about .img-big-news::before,
+	.content-about.content-calender .left-calendar .thumbnail-about .img-big-news::before,
+	.content-about.content-newmain .new-top .thumbnail-about .img-big-news::before{
+		left: -10px;
+		bottom: -10px;
+	}
+	.content-about .thumbnail-about .img-big-news::before, .content-about .newsite-top .thumbnail-about .img-big-news::before,
+	.content-about.content-education .new-top .thumbnail-about .img-big-news::before,
+	.content-about.content-calender .left-calendar .thumbnail-about .img-big-news::before,
+	.content-about.content-newmain .new-top .thumbnail-about .img-big-news::before{
+		height: 20px;
+	}
+	.content-about .newsite-top .name-board{
+		max-width: 100%;
+	}
+	.left-footer, .center-footer{
+		width: 100%;
+	}
+	#footer h3{
+		min-height: 30px;
+		margin: 0;
+	}
+	.center-footer{
+		margin-top: 25px;
+	}
+	.content-newsite .share-news{
+		margin: 30px 0 50px;
+	}
+	.content-newsite a span{
+		background: none !important;
+		font-size: 0;
+	}
+	.content-newsite .share-news a{
+		padding: 0;
+	}
+	.title-board span, .content-visitus .title-visit{
+		font-size: 20px;
+	}
+	.content-about .slider-about .bx-wrapper .bx-prev, .content-newsite .list-new-other .bx-wrapper .bx-prev, .content-about .list-partners .bx-wrapper .bx-prev,
+	.content-about .slider-about .bx-wrapper .bx-next, .content-newsite .list-new-other .bx-wrapper .bx-next, .content-about .list-partners .bx-wrapper .bx-next,
+	.content-about .slider-about .bx-wrapper .bx-prev:hover, .content-newsite .list-new-other .bx-wrapper .bx-prev:hover, .content-about .list-partners .bx-wrapper .bx-prev:hover{
+		background-size: 60%;
+	}
+	.list-new-other .bx-viewport{
+		height: 220px !important;
+	}
+	.content-visitus .picture-thumbnail{
+		margin-bottom: 30px;
+	}
+}
+@media (min-height:800px) {
+	#header .menu-main {
+		margin: 110px 0 50px;
+	}
+	.menu-main > ul > li {
+		margin-bottom: 20px;
+	}
+	#footer .inner-footer {
+		padding:50px 15px;
+	}
+}

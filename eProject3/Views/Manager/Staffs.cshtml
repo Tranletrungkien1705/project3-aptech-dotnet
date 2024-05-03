@@ -1,0 +1,108 @@
+﻿@model IPagedList<eProject3.Models.Staff>;
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@using eProject3.Repository;
+@inject IStaffRepository staff
+@{
+    ViewData["Title"] = "Staff";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+<body>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="home-tab">
+                                <div class="d-sm-flex align-items-center justify-content-between border-bottom">
+                                </div>
+                                <div class="tab-content tab-content-basic">
+                                    <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
+
+
+                                        <div class="row">
+                                            <div class="col-12 grid-margin stretch-card">
+                                                <div class="card card-rounded">
+                                                    <div class="card-body">
+                                                        <div class="d-sm-flex justify-content-between align-items-start">
+                                                            <div>
+                                                                <h4 class="card-title card-title-dash">Staffs Personal Information</h4>
+                                                            </div>
+                                                           
+                                                        </div>
+                                                        <div class="table-responsive  mt-1">
+                                                            <table class="table select-table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Id</th>
+                                                                        <th>Code</th>
+                                                                        <th>Name</th>
+                                                                        <th>Email</th>
+                                                                        <th>Gender</th>
+                                                                        <th>DateOfBirth</th>
+                                                                        <th>Degree</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    @foreach (Staff x in Model)
+                                                                    {
+                                                                                <tr>
+                                                                                    <td>@x.Id</td>
+                                                                                    <td>
+                                                                                        <div>
+                                                                                            <h6>@x.Code</h6>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="d-flex ">
+                                                                                            <img src="~/images/faces/face1.jpg" alt="">
+                                                                                            <div>
+                                                                                                <h6>@x.Name</h6>
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <h6>@x.Email</h6>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <h6>@x.Gender</h6>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <h6>@x.DateOfBirth</h6>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <h6>@x.Degree</h6>
+                                                                                    </td>
+
+
+                                                                                  
+                                                                                </tr>
+                                                                    }
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- </div> -->
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    @Html.PagedListPager(Model, page=>Url.Action("Staffs",new{page}))
+                </div>
+               
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+ 
+</body>
+
+</html>
+

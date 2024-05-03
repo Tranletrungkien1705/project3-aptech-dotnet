@@ -1,0 +1,103 @@
+﻿@model IPagedList<eProject3.Models.Student>;
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@using eProject3.Repository;
+@inject IStudentRepository StudentRespository
+@{
+    ViewData["Title"] = "Elite Students";
+    Layout = "~/Views/Shared/_LayoutWEB.cshtml";
+}
+<div class="header-mobile">
+    <a href="index.html" class="logo"><img src="~/public/vcca/images/wallpaperflare.com_wallpaper (1).jpg" alt="VCCA" /></a>
+</div>
+<main id="content" class="content-home content-about content-newmain">
+
+
+
+
+    <div class="slider-about">
+        <ul class="bxslider">
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(13\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(11\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(2\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="content-main"></div>
+        <div class="animated fade-in title-board">
+            <h2><span>Students who received awards from last competitions</span></h2>
+        </div>
+
+        <div class="home-section home-exhibitions">
+            <div class="row">
+                <div class="col-md-12">
+                <section class="intro">
+                    <div class="bg-image h-100" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/tables/img2.jpg');">
+                        <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0,0,0,.25);">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-12">
+                                        <div class="card bg-dark shadow-2-strong">
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class="table table-dark table-borderless mb-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">ID</th>
+                                                                <th scope="col">CODE</th>
+                                                                <th scope="col">NAME</th>
+                                                                <th scope="col">EMAIL</th>
+                                                                <th scope="col">GENDER</th>
+                                                                <th scope="col">DATEOFBIRTH</th>
+                                                   
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                             @foreach (Student x in Model)
+                                                                {
+                                                                    <tr>
+                                                                        <th>@x.Id</th>
+                                                                        <th scope="row">@x.Code</th>
+                                                                        <td>@x.Name</td>
+                                                                        <td>@x.Email</td>
+                                                                        <td>@x.Gender</td>
+                                                                        <td>@x.DateOfBirth</td>
+                                                                    
+                                                                    </tr>
+                                                                }
+                                                               
+                                                            
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                </div>
+            </div>
+
+            
+        </div>
+
+
+
+            @Html.PagedListPager(Model, page=>Url.Action("EliteStudents",new{page}))
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+
+</main>

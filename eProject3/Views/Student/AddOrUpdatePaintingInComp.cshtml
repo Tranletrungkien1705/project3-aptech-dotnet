@@ -1,0 +1,78 @@
+﻿@model eProject3.Models.PaintingInComp;
+@using eProject3.Models;
+@using eProject3.Repository;
+@inject IPaintingInCompRepository paintingInCompRepository;
+@inject IPaintingRepository paintingRepository
+@{
+    ViewData["Title"] = "AddOrUpdatePaintingInComp";
+    Layout = "~/Views/Shared/_LayoutStudent.cshtml";
+    var ListPainName = await paintingRepository.GetAllPublicAsync();
+    var competitionId = Convert.ToInt32(TempData["competitionId"]);
+    var PainInComp = new PaintingInComp();
+    if(Model != null)
+    {
+        PainInComp = Model;
+    }
+    //x = StudentRespository.GetByIdAsync(id);
+
+}
+<head>
+    <title>Add/Edit Movie</title>
+    <style>
+        /* Tùy chỉnh giao diện CSS ở đây */
+        .form-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .form-container h2 {
+                margin-bottom: 20px;
+            }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 form-container">
+                <h2>Add/Edit Movie</h2>
+                    <form id="staffFeedbackForm" method="POST" action="/Student/AddOrUpdatePaintingInComp">
+                        <input type="number" name="Id" value="@PainInComp.Id">
+                         <div class="form-group">
+                                <label for="PaintingId">Painting's Name:</label>
+                                <select name="PaintingId" id="PaintingId">
+                                    @foreach (var name in ListPainName)
+                                    {
+                                        var selected = name.Id.Equals(PainInComp.PaintingId) ? "selected" : "";
+                                        <option value="@name.Id" selected="@selected">@name.Name</option>
+                                    }
+                                </select>
+                                @*<input type="text" class="form-control" id="paintingName" name="PaintingId" value=" @paintingName">*@
+                            </div>
+                            @if(Model != null){
+                                <img src="~/uploads/@(paintingRepository.GetByIdAsync((int)(PainInComp.PaintingId)).GetAwaiter().GetResult()?.FileEntity) " width="50px" />
+                            }
+                    <input type="hidden" name="CompetitionId" value="@competitionId">
+                       @* <div class="form-group">
+                            <label for="competition">Competitoin:</label>
+                        <input type="text" class="form-control" id="exhibition" name="ExhibitionId" value="@competitionId">*@
+                        @*</div>*@
+                      
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Save</button>
+                    </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Link tới các script cần thiết, bao gồm Bootstrap JS và jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function saveMovie() {
+            // Xử lý lưu dữ liệu ở đây
+        }
+    </script>
+
+</body>

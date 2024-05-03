@@ -1,0 +1,85 @@
+﻿@model eProject3.Models.Exhibition
+@using eProject3.Models;
+@using eProject3.Repository;
+@inject IExhibitionRepository exhibitionExRepository
+@{
+    ViewData["Title"] = "AddOrUpdateStaffFeedback";
+    Layout = "~/Views/Shared/_LayoutStaff.cshtml";
+    var x = new Exhibition();
+    //x = StudentRespository.GetByIdAsync(id);
+
+    if (Model != null)
+    {
+        x = Model;
+
+    }
+}
+<head>
+    <title>Add/Edit Movie</title>
+    <style>
+        /* Tùy chỉnh giao diện CSS ở đây */
+        .form-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .form-container h2 {
+                margin-bottom: 20px;
+            }
+    </style>
+</head>
+<body>
+    c=@Model
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 form-container">
+                <h2>Add/Edit Movie</h2>
+                @if (1 + 1 == 2)
+                {
+                    var id = x.Id;
+                    var name = x.Name;
+                    var startOfDate = x.StartOfDate;
+                    var endOfDate = x.EndOfDate;
+                    var description = x.Description;
+                    var condition = x.Conditions;
+                    <form id="exhibitionForm" method="POST" asp-action="AddOrUpdateExhibitionAsyn">
+                        <input type="number" name="id" value="@id">
+                        <div class="form-group">
+                            <label for="Name">Name:</label>
+                            <input type="text" class="form-control" id="Name" name="Name" value="@name">
+                        </div>
+                        <div class="form-group">
+                            <label for="StartOfDate">Start Of Date:</label>
+                            <input type="text" class="form-control" id="sod" name="StartOfDate" value="@startOfDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="EndOfDate">End Of Date:</label>
+                            <input type="text" class="form-control" id="eod" name="EndOfDate" value="@endOfDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="desc">Description:</label>
+                            <input type="text" class="form-control" id="des" name="Description" value="@description">
+                        </div>
+                        <div class="form-group">
+                            <label for="con">Condition:</label>
+                            <input type="text" class="form-control" id="sod" name="Conditions" value="@condition">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Save</button>
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Link tới các script cần thiết, bao gồm Bootstrap JS và jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function saveMovie() {
+            // Xử lý lưu dữ liệu ở đây
+        }
+    </script>
+
+</body>

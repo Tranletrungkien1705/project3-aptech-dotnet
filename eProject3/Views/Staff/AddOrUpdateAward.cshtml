@@ -1,0 +1,84 @@
+﻿@model eProject3.Models.Award
+@using eProject3.Repository;
+@inject IAwardRepository awardRepository
+
+@{
+    ViewData["Title"] = "AddOrUpdateStaffs";
+    Layout = "~/Views/Shared/_LayoutStaff.cshtml";
+    var x = new Award();
+    if (Model != null)
+    {
+        x = Model;
+    }
+}
+
+<head>
+    <title>Add/Edit Movie</title>
+    <style>
+        /* Tùy chỉnh giao diện CSS ở đây */
+        .form-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .form-container h2 {
+                margin-bottom: 20px;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 form-container">
+                <h2>Add/Edit Movie</h2>
+                @if (1 + 1 == 2)
+                {
+                    var id = x.Id;
+                    var name = x.Name;
+                    var awardDay = x.AwardDay;
+                    var RemarksOfCompetion = x.RemarksOfCompetion;
+                    var PaintingNam = x.PaintingInCompId;
+                    var CompetitionName = x.PaintingInCompId;
+                    <form id="studentForm" method="POST" asp-action="AddOrUpdateAwardAsyn">
+                        @Html.HiddenFor(m => m.Id) <!-- Sử dụng HtmlHelper để tạo trường ẩn cho Id -->
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" name="name" value="@x.Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="awardDay">Award Day:</label>
+                            <input type="text" class="form-control" id="awardDay" name="awardDay" value="@x.AwardDay">
+                        </div>
+                        <div class="form-group">
+                            <label for="remarksOfCompetion">Remarks Of Competion:</label>
+                            <input type="text" class="form-control" id="remarksOfCompetion" name="remarksOfCompetion" value="@x.RemarksOfCompetion">
+                        </div>
+                        <div class="form-group">
+                            <label for="paintingName">Painting Name:</label>
+                            <input type="number" class="form-control" id="paintingName" name="PaintingInCompId" value="@x.PaintingInCompId">
+                        </div>
+                        <div class="form-group">
+                            <label for="CompetitionName">Competition Name:</label>
+                            <input type="number" class="form-control" id="CompetitionName" name="PaintingInCompId" value="@x.PaintingInCompId">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Save</button>
+
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Link tới các script cần thiết, bao gồm Bootstrap JS và jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function saveMovie() {
+            // Xử lý lưu dữ liệu ở đây
+        }
+    </script>
+</body>

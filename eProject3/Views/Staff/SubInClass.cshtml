@@ -1,0 +1,143 @@
+﻿@model IPagedList<eProject3.Models.SubInClass>;
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@using eProject3.Repository;
+@inject IStaffRepository staffRepository;
+@inject IManagerRepository managerRepository;
+@inject IClassRepository classRepository;
+@inject ISubjectRepository subjectRepository;
+@{
+    ViewData["Title"] = "Current Competitions";
+    Layout = "~/Views/Shared/_LayoutStaff.cshtml";
+}
+<div class="header-mobile">
+    <a href="index.html" class="logo"><img src="~/public/vcca/images/wallpaperflare.com_wallpaper (1).jpg" alt="VCCA" /></a>
+</div>
+<main id="content" class="content-home content-about content-newmain">
+
+
+
+
+    <div class="slider-about">
+        <ul class="bxslider">
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(13\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(11\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(2\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="content-main"></div>
+        <div class="animated fade-in title-board">
+            <h2><span>Awards</span></h2>
+        </div>
+
+        <div class="home-section home-exhibitions">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="intro">
+                        <div class="bg-image h-100" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/tables/img2.jpg');">
+                            <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0,0,0,.25);">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-12">
+                                            <div class="card bg-dark shadow-2-strong">
+                                                <div class="card-body">
+                                                    <div>
+                                                        @*<button id="openModalBtn" class="btn btn-primary btn-lg text-white mb-0 me-0" type="button"><i class="mdi mdi-account-plus"></i>Add New Students</button>*@
+                                                        <a href="/Staff/AddOrUpdateSubInClass"><button class="btn btn-primary btn-lg text-white mb-0 me-0" id="addButton" <i class="mdi mdi-account-plus"></i>Add New Award</button></a>
+                                                    </div>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-dark table-borderless mb-0">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">ID</th>
+                                                                    <th scope="col">Staff Name</th>
+                                                                    <th scope="col">Class Name</th>
+                                                                    <th scope="col">Manager Name</th>
+                                                                    <th scope="col">Subject Name</th>
+                                                                    <th scope="col">Number Of Sessions</th>
+                                                                    <th scope="col">Start Date</th>
+                                                                    <th scope="col">End Date</th>
+                                                                    <th>Edit</th>
+                                                                    <th>Delete</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                @if(Model != null)
+                                                                {
+                                                                    @foreach (var x in Model)
+                                                                    {
+                                                                        <tr>
+                                                                            <th>@x.Id</th>
+                                                                            <th>@staffRepository.GetByIdAsync((int)x.StaffId).GetAwaiter().GetResult().Name</th>
+                                                                            <td>@classRepository.GetByIdAsync((int)x.ClassId).GetAwaiter().GetResult().Name</td>
+                                                                            <td>@managerRepository.GetByIdAsync((int)x.ManagerId).GetAwaiter().GetResult().Name</td>
+                                                                            <td>@subjectRepository.GetByIdAsync((int)x.SubjectId).GetAwaiter().GetResult().Name</td>
+                                                                            <td>@x.NumberOfSession</td>
+                                                                            <td>@x.StartDate</td>
+                                                                            <td>@x.EndDate</td>
+                                                                            <td>
+                                                                                <a href="/Staff/AddOrUpdateSubInClass/@x.Id"><button class="btn btn-success" value="@x.Id">Edit</button></a>
+
+                                                                            </td>
+                                                                            <td>
+                                                                                <a href="javascript:void(0);" onclick="deleteStudent(@x.Id)"><button class="btn btn-success" value="">Delete</button></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    }
+                                                                }
+                                                                
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        @Html.PagedListPager(Model, page=>Url.Action("SubInClass",new{page}))
+        <script>
+            function deleteStudent(id) {
+                if (confirm('Are you sure you want to delete this one?')) {
+                    $.ajax({
+                        url: '/Staff/DeleteSubInClassAsync/' + id,
+                        type: 'GET',
+                        success: function (result) {
+                            // Xử lý kết quả thành công
+                            alert('Completely deleted successfully');
+                            // Thực hiện các hành động khác sau khi xóa thành công
+                            window.location.href = '/Staff/SubInClass';
+                        },
+                        error: function (xhr, status, error) {
+                            // Xử lý lỗi
+                            alert('Error deleting this one');
+                        }
+                    });
+                }
+            }
+        </script>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+</main>

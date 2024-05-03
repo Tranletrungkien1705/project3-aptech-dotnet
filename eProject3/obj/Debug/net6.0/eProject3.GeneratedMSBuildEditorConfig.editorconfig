@@ -1,0 +1,315 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = eProject3
+build_property.RootNamespace = eProject3
+build_property.ProjectDir = D:\PROJECTS IN APTECH\eProject3\eProject3\eProject3\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\PROJECTS IN APTECH\eProject3\eProject3\eProject3
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Admin/AddOrUpdateStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkT3JVcGRhdGVTdGFmZi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Admin/AddOrUpdateStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkT3JVcGRhdGVTdHVkZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Admin/AddOrUpdateSubInClass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkT3JVcGRhdGVTdWJJbkNsYXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Admin/Authorizations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXV0aG9yaXphdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Admin/Classes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2xhc3Nlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Admin/Staffs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3RhZmZzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Admin/Students.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3R1ZGVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Admin/SubInClass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3ViSW5DbGFzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Admin/UpdateRoll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlUm9sbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Admin/UpdateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/File/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Home/CurrentCompetition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDdXJyZW50Q29tcGV0aXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Home/CurrentPainting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDdXJyZW50UGFpbnRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Home/EliteStudents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFbGl0ZVN0dWRlbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Home/UpcomingCompetition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVcGNvbWluZ0NvbXBldGl0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Manager/AddOrUpdateExhibition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxBZGRPclVwZGF0ZUV4aGliaXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Manager/Award.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxBd2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Manager/Competition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxDb21wZXRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Manager/Exhibition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxFeGhpYml0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Manager/Staffs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxTdGFmZnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Manager/Students.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxTdHVkZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Shared/_LayoutManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRNYW5hZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Shared/_LayoutStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRTdGFmZi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Shared/_LayoutStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRTdHVkZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Shared/_LayoutWEB.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRXRUIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/AddOrUpdateAward.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcQWRkT3JVcGRhdGVBd2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/AddOrUpdateClass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcQWRkT3JVcGRhdGVDbGFzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/AddOrUpdateCompetition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcQWRkT3JVcGRhdGVDb21wZXRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/AddOrUpdateExhibition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcQWRkT3JVcGRhdGVFeGhpYml0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/AddOrUpdatePaintingInComp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcQWRkT3JVcGRhdGVQYWludGluZ0luQ29tcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/AddOrUpdatePaintingsInEx.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcQWRkT3JVcGRhdGVQYWludGluZ3NJbkV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/AddOrUpdateStaffFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcQWRkT3JVcGRhdGVTdGFmZkZlZWRiYWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/AddOrUpdateStudentInSub.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcQWRkT3JVcGRhdGVTdHVkZW50SW5TdWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/AddOrUpdateSubInClass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcQWRkT3JVcGRhdGVTdWJJbkNsYXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/Award.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcQXdhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/Class.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcQ2xhc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/Competition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcQ29tcGV0aXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/DetailOfPainting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcRGV0YWlsT2ZQYWludGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/Exhibition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcRXhoaWJpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/MarkPainInComp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcTWFya1BhaW5JbkNvbXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/MarkStudentInSub.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcTWFya1N0dWRlbnRJblN1Yi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/PaintingInComp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcUGFpbnRpbmdJbkNvbXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/PaintingsInEx.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcUGFpbnRpbmdzSW5FeC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/StaffFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcU3RhZmZGZWVkYmFjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/StudentInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcU3R1ZGVudEluZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/StudentInSub.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcU3R1ZGVudEluU3ViLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Staff/SubInClass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcU3ViSW5DbGFzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Student/AddOrUpdatePainting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxBZGRPclVwZGF0ZVBhaW50aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Student/AddOrUpdatePaintingInComp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxBZGRPclVwZGF0ZVBhaW50aW5nSW5Db21wLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Student/Award.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxBd2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Student/Classes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxDbGFzc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Student/Competition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxDb21wZXRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Student/Painting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxQYWludGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Student/PaintingInComp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxQYWludGluZ0luQ29tcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Student/PaintingInEx.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxQYWludGluZ0luRXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Student/StaffsFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxTdGFmZnNGZWVkYmFjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Student/StudentInSub.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxTdHVkZW50SW5TdWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Student/UpcomingCompetition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxVcGNvbWluZ0NvbXBldGl0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROJECTS IN APTECH/eProject3/eProject3/eProject3/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-edcf3cjy7p

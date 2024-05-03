@@ -1,0 +1,133 @@
+﻿@model List<eProject3.Models.Competition>;
+@using eProject3.Models;
+@using eProject3.Repository;
+@inject ICompetitionRepository competition;
+@inject IPaintingInCompRepository paintingInCom;
+@inject IPaintingRepository paintingRepository;
+@inject IMarkOfPaintInCompRepository markOfPaintInComp;
+@inject IStudentRepository student;
+@{
+    ViewData["Title"] = "Competitions Of Student";
+    Layout = "~/Views/Shared/_LayoutStudent.cshtml";
+}
+<div class="header-mobile">
+    <a href="index.html" class="logo"><img src="~/public/vcca/images/wallpaperflare.com_wallpaper (1).jpg" alt="VCCA" /></a>
+</div>
+<main id="content" class="content-home content-about content-newmain">
+
+
+
+
+    <div class="slider-about">
+        <ul class="bxslider">
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(13\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(11\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(2\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+        </ul>
+    </div>
+    @foreach (Competition c in Model)
+    {
+
+        var listPainInCom = new List<PaintingInComp>();
+        listPainInCom = await @paintingInCom.GetPaintingInCompById(c.Id);
+        <div class="container">
+            <div class="content-main"></div>
+            <div class="animated fade-in title-board">
+                <h2><span>@c.Name</span></h2>
+            </div>
+            <a href="/Student/AddOrUpdatePaintingInComp/@c.Id"><button class="btn btn-primary btn-lg text-white mb-0 me-0" id="addButton">Add New Painting in @c.Name</button></a>
+
+            <div class="home-section home-exhibitions">
+                <div class="row">
+                    <div class="col-md-12">
+                        <section class="intro">
+                            <div class="bg-image h-100" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/tables/img2.jpg');">
+                                <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0,0,0,.25);">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="card bg-dark shadow-2-strong">
+                                                    <div class="card-body">
+                                                        @if (listPainInCom.Count > 0)
+                                                        {
+                                                            foreach (var painInCom in listPainInCom)
+                                                            {
+                                                                var paint = new Painting();
+                                                                var AStudent = new Student();
+                                                                var mark = new MarkOfPaintInComp();
+                                                                paint = await paintingRepository.GetByIdAsync((int)(painInCom.PaintingId));
+                                                                AStudent = await student.GetByIdAsync((int)paint.StudentId);
+                                                                mark = await markOfPaintInComp.GetMarkByPaintInCom(painInCom.Id);
+                                                                <div class="col-sm-6">
+                                                                    <div class="animated fade-in home-item">
+
+                                                                        <img src="~/uploads/@(paint.FileEntity) " width="" />
+                                                                        <a href="#">
+                                                                            <div class="info">
+                                                                                <h3>@paint.Name</h3>
+                                                                                <p>@paint.Description</p>
+                                                                                <p><i></i></p>
+                                                                                <p>@AStudent.Name</p>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+                                                                    @*<a href="/Student/DeletePaintingInCompAsync/@c.Id&@paint.Id"><button class="btn btn-primary btn-lg text-white mb-0 me-0" id="addButton">Update</button></a>*@
+
+                                                                    <a href="javascript:void(0);" onclick="deleteStudent(@painInCom.Id)"><button class="btn btn-primary btn-lg text-white mb-0 me-0" id="addButton">Delete</button></a>
+
+                                                                    <div class="col-sm-6">
+                                                                        <h1>@mark?.Mark</h1>
+                                                                    </div>
+                                                                </div>
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <script>
+                function deleteStudent(id) {
+                    if (confirm('Are you sure you want to delete this one?')) {
+                        $.ajax({
+                            url: '/Student/DeletePaintingInCompAsync/' + id,
+                            type: 'GET',
+                            success: function (result) {
+                                // Xử lý kết quả thành công
+                                alert('Completely deleted successfully');
+                                // Thực hiện các hành động khác sau khi xóa thành công
+                                window.location.href = '/Student/Competition';
+                            },
+                            error: function (xhr, status, error) {
+                                // Xử lý lỗi
+                                alert('Error deleting this one');
+                            }
+                        });
+                    }
+                }
+            </script>
+        </div>
+    }
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+</main>

@@ -1,0 +1,74 @@
+﻿@model eProject3.Models.Class
+@using eProject3.Repository;
+@inject IClassRepository classRepository
+
+@{
+    ViewData["Title"] = "AddOrUpdateClass";
+    Layout = "~/Views/Shared/_LayoutStaff.cshtml";
+    var x = new Class();
+    if (Model != null)
+    {
+        x = Model;
+    }
+}
+
+<head>
+    <title>Add/Edit Movie</title>
+    <style>
+        /* Tùy chỉnh giao diện CSS ở đây */
+        .form-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .form-container h2 {
+                margin-bottom: 20px;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 form-container">
+                <h2>Add/Edit Movie</h2>
+                @if (1 + 1 == 2)
+                {
+                    var id = x.Id;
+                    var name = x.Name;
+                    var startOfDate = x.StartOfDate;
+                    var endOfDate = x.EndOfDate;
+
+                    <form id="classForm" method="POST" asp-action="AddOrUpdateClassAsyn">
+                        @Html.HiddenFor(m => m.Id) <!-- Sử dụng HtmlHelper để tạo trường ẩn cho Id -->
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" name="name" value="@x.Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="StartOfDate">Start Of Date:</label>
+                            <input type="date" class="form-control" id="StartOfDate" name="StartOfDate" value="@x.StartOfDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="EndOfDate">End Of Date:</label>
+                            <input type="date" class="form-control" id="EndOfDate" name="EndOfDate" value="@x.EndOfDate">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Save</button>
+
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Link tới các script cần thiết, bao gồm Bootstrap JS và jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function saveMovie() {
+            // Xử lý lưu dữ liệu ở đây
+        }
+    </script>
+</body>

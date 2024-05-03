@@ -1,0 +1,106 @@
+﻿@model List<eProject3.Models.PaintingInEx>;
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@using eProject3.Repository;
+@inject IPaintingRepository paintingRepository
+@inject IExhibitionRepository exhibitionRepository;
+@inject IPaintingInExRepository paintInEx;
+@inject IStudentRepository student;
+@{
+    ViewData["Title"] = "paintingInExRepository";
+    Layout = "~/Views/Shared/_LayoutStudent.cshtml";
+    var ListEx = new List<Exhibition>();
+    ListEx = await exhibitionRepository.GetAllPublicAsync();
+}
+<div class="header-mobile">
+    <a href="index.html" class="logo"><img src="~/public/vcca/images/wallpaperflare.com_wallpaper (1).jpg" alt="VCCA" /></a>
+</div>
+<main id="content" class="content-home content-about content-newmain">
+
+
+
+
+    <div class="slider-about">
+        <ul class="bxslider">
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(13\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(11\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(2\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+        </ul>
+    </div>
+    @foreach (var e in ListEx)
+    {
+        var listPainInEx = new List<PaintingInEx>();
+        listPainInEx = await @paintInEx.GetPaintingInExByExId(e.Id);
+        <div class="container">
+            <div class="content-main"></div>
+            <div class="animated fade-in title-board">
+                <h2><span>@e.Name</span></h2>
+            </div>
+
+            <div class="home-section home-exhibitions">
+                <div class="row">
+                    <div class="col-md-12">
+                        <section class="intro">
+                            <div class="bg-image h-100" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/tables/img2.jpg');">
+                                <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0,0,0,.25);">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="card bg-dark shadow-2-strong">
+                                                    <div class="card-body">
+
+                                                        @if (listPainInEx.Count > 0)
+                                                        {
+                                                            foreach (var painInCom in listPainInEx)
+                                                            {
+                                                                var paint = new Painting();
+                                                                var AStudent = new Student();
+                                                                paint = await paintingRepository.GetByIdAsync((int)(painInCom.PaintingId));
+                                                                AStudent = await student.GetByIdAsync((int)paint.StudentId);
+                                                                <div class="col-sm-4">
+                                                                    <div class="animated fade-in home-item">
+
+                                                                        <img src="~/uploads/@(paint.FileEntity) " width="" />
+                                                                        <a href="MarkPainInComp/@painInCom.Id">
+                                                                            <div class="info">
+                                                                                <h3>@paint.Name</h3>
+                                                                                <p>@paint.Description</p>
+                                                                                <p><i></i></p>
+                                                                                <p>@AStudent.Name</p>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    }
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+</main>

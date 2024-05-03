@@ -1,0 +1,132 @@
+﻿@model List<eProject3.Models.Student>
+@using eProject3.Repository;
+@inject IStudentRepository StudentRespository
+@{
+    ViewData["Title"] = "AddOrUpdateStudentInSub";
+    Layout = "~/Views/Shared/_LayoutStaff.cshtml";
+    //x = StudentRespository.GetAllAsync().GetAwaiter().GetResult();
+
+}
+    <div class="header-mobile">
+        <a href="index.html" class="logo"><img src="~/public/vcca/images/wallpaperflare.com_wallpaper (1).jpg" alt="VCCA" /></a>
+    </div>
+    <main id="content" class="content-home content-about content-newmain">
+
+
+
+
+        <div class="slider-about">
+            <ul class="bxslider">
+                <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(13\).jpg');">
+                    <a href="javascript:;"></a>
+                </li>
+                <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(11\).jpg');">
+                    <a href="javascript:;"></a>
+                </li>
+                <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(2\).jpg');">
+                    <a href="javascript:;"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="content-main"></div>
+            <div class="animated fade-in title-board">
+                <h2><span>Awards</span></h2>
+            </div>
+        <div class="home-section home-exhibitions">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="intro">
+                        <div class="bg-image h-100" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/tables/img2.jpg');">
+                            <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0,0,0,.25);">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-12">
+                                            <div class="card bg-dark shadow-2-strong">
+                                                <div class="card-body">
+                                                    <div class="table-responsive">
+                                                            <table class="table select-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Id</th>
+                                                                    <th>Code</th>
+                                                                    <th>Name</th>
+                                                                    <th>Email</th>
+                                                                    <th>Gender</th>
+                                                                    <th>DateOfBirth</th>
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                @if (Model != null)
+                                                                {
+                                                                    @foreach (Student x in Model)
+                                                                    {
+                                                                        <tr>
+                                                                            <td>@x.Id</td>
+                                                                            <td>
+                                                                                <div>
+                                                                                    <h6>@x.Code</h6>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="d-flex ">
+                                                                                    <img src="~/images/faces/face1.jpg" alt="">
+                                                                                    <div>
+                                                                                        <h6>@x.Name</h6>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <h6>@x.Email</h6>
+                                                                            </td>
+                                                                            <td>
+                                                                                <h6>@x.Gender</h6>
+                                                                            </td>
+                                                                            <td>
+                                                                                <h6>@x.DateOfBirth</h6>
+                                                                            </td>
+
+
+
+                                                                            <td>
+                                                                                <a href="/Staff/AddStudentToClass/@x.Id"><button class="btn btn-success">Add</button></a>
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    }
+                                                                }
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+        </div>
+    <!-- Link tới các script cần thiết, bao gồm Bootstrap JS và jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function saveMovie() {
+            // Xử lý lưu dữ liệu ở đây
+        }
+            </script>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+
+    </main>

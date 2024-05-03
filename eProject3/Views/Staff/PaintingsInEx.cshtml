@@ -1,0 +1,127 @@
+﻿@model List<eProject3.Models.PaintingInEx>;
+@using eProject3.Models;
+@using eProject3.Repository;
+@inject IExhibitionRepository ExhibitionRepository;
+@inject IPaintingRepository paintingRepository;
+@inject IPaintingInExRepository paintingInEx;
+@inject IStudentRepository student;
+@{
+    ViewData["Title"] = "paintingInExRepository";
+    Layout = "~/Views/Shared/_LayoutStaff.cshtml";
+    List<Exhibition> ex = new List<Exhibition>();
+    ex = await ExhibitionRepository.GetAllAsync();
+}
+<div class="header-mobile">
+    <a href="index.html" class="logo"><img src="~/public/vcca/images/wallpaperflare.com_wallpaper (1).jpg" alt="VCCA" /></a>
+</div>
+<main id="content" class="content-home content-about content-newmain">
+
+
+
+
+    <div class="slider-about">
+        <ul class="bxslider">
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(13\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(11\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(2\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+        </ul>
+    </div>
+    @foreach (Exhibition c in ex)
+    {
+
+        var listPainInEx = new List<PaintingInEx>();
+        listPainInEx = await @paintingInEx.GetPaintingInExByExId(c.Id);
+        <div class="container">
+            <div class="content-main"></div>
+            <div class="animated fade-in title-board">
+                <h2><span>@c.Name</span></h2>
+            </div>
+            <a href="/Staff/AddOrUpdatePaintingsInEx/@c.Id"><button class="btn btn-primary btn-lg text-white mb-0 me-0" id="addButton">Add New Painting in @c.Name</button></a>
+
+
+            <div class="home-section home-exhibitions">
+                <div class="row">
+                    <div class="col-md-12">
+                        <section class="intro">
+                            <div class="bg-image h-100" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/tables/img2.jpg');">
+                                <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0,0,0,.25);">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="card bg-dark shadow-2-strong">
+                                                    <div class="card-body">
+                                                        @if (listPainInEx.Count > 0)
+                                                        {
+                                                            foreach (var painInCom in listPainInEx)
+                                                            {
+                                                                var paint = new Painting();
+                                                                var AStudent = new Student();
+                                                                paint = await paintingRepository.GetByIdAsync((int)(painInCom.PaintingId));
+                                                                AStudent = await student.GetByIdAsync((int)paint.StudentId);
+                                                                <div class="col-sm-4">
+                                                                    <div class="animated fade-in home-item">
+
+                                                                        <img src="~/uploads/@(paint.FileEntity) " width="" />
+                                                                        <a href="DetailOfPainting/@paint.Id">
+                                                                            <div class="info">
+                                                                                <h3>@paint.Name</h3>
+                                                                                <p>@paint.Description</p>
+                                                                                <p><i></i></p>
+                                                                                <p>@AStudent.Name</p>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" onclick="deleteStudent(@painInCom.Id)"><button class="btn btn-primary btn-lg text-white mb-0 me-0" id="addButton">Delete Painting out @c.Name</button></a>
+
+                                                                </div>
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+            <script>
+                function deleteStudent(id) {
+                    if (confirm('Are you sure you want to delete this one?')) {
+                        $.ajax({
+                            url: '/Staff/DeletePaintingsInExAsync/' + id,
+                            type: 'GET',
+                            success: function (result) {
+                                // Xử lý kết quả thành công
+                                alert('Completely deleted successfully');
+                                // Thực hiện các hành động khác sau khi xóa thành công
+                                window.location.href = '/Staff/PaintingInEx';
+                            },
+                            error: function (xhr, status, error) {
+                                // Xử lý lỗi
+                                alert('Error deleting this one');
+                            }
+                        });
+                    }
+                }
+            </script>
+        </div>
+    }
+    </div>
+    </div>
+    </div>
+    </div>
+</main>

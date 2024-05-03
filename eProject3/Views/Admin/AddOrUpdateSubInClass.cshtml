@@ -1,0 +1,153 @@
+﻿@model eProject3.Models.SubInClass
+@using eProject3.Models;
+@using eProject3.DTO;
+@using eProject3.Repository;
+@inject IStaffRepository staffRepository;
+@inject IManagerRepository managerRepository;
+@inject IClassRepository classRepository;
+@inject ISubjectRepository subjectRepository;
+@inject ISubInClassRepository subInClassRepository;
+@{
+    ViewData["Title"] = "AddOrUpdateSubInClass";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    var idofsubinclass = Convert.ToInt32(TempData["idofsubinclass"]);
+    var idofclass = Convert.ToInt32(TempData["idofclass"]);
+    TempData.Keep("idofclass");
+    var x = new SubInClass();
+    var listMana = new List<Manager>();
+    listMana = await managerRepository.GetAllPublicAsync();
+    var listSub = await subjectRepository.GetAllPublicAsync();
+    var listCla = await classRepository.GetAllPublicAsync();
+    var listStaff = await staffRepository.GetAllPublicAsync();
+    var listSubInClass = await subInClassRepository.GetDetailSubInClass(idofclass);
+    if (Model != null)
+    {
+        x = Model;
+
+    }
+}
+<head>
+    <title>Add/Edit Movie</title>
+    <style>
+        /* Tùy chỉnh giao diện CSS ở đây */
+        .form-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .form-container h2 {
+                margin-bottom: 20px;
+            }
+    </style>
+</head>
+<body>
+    c=@Model
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 form-container">
+                <h2>Add/Edit Movie</h2>
+                @if (1 + 1 == 2)
+                {
+                    var id = x.Id;
+                    var staffName = x.StaffId;
+                    var managerName = x.ManagerId;
+                    var className = x.ClassId;
+                    var subjectName = x.SubjectId;
+                    var numberOfSesstion = x.NumberOfSession;
+                    var startOfDate = x.StartDate;
+                    var endOfDate = x.EndDate;
+                    <form method="POST" asp-action="AddOrUpdateSubInClassAsync" >
+                        <input type="number" name="Id" value="@id">
+                        <div class="form-group">
+                            <label for="StaffId">Staff's Name:</label>
+                            <select name="StaffId" id="StaffId">
+                                @foreach (var name in listStaff)
+                                {
+                                    <option  value="@name.Id">@name.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ManagerId">Manager's Name:</label>
+                            <select name="ManagerId" id="ManagerId">
+                                @foreach (var name in listMana)
+                                {
+                                    <option  value="@name.Id">@name.Name</option>
+                                    
+                                }
+                            </select>
+
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="SubjectId">Subject's Name:</label>
+                            <select name="SubjectId" id="SubjectId" disabled>
+                                @foreach (var name in listSubInClass)
+                                {
+                                    var Sub = subjectRepository.GetByIdAsync((int)name.SubjectId).GetAwaiter().GetResult();
+                                    <option value="@Sub.Id">@Sub.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="NumberOfSession">Number Of Session:</label>
+                            <input type="number" class="form-control" id="NumberOfSession" name="NumberOfSession" value="@numberOfSesstion">
+                        </div>
+                        <div class="form-group">
+                            <label for="StartDate">Start Date:</label>
+                            <input type="datetime" class="form-control" id="StartDate" name="StartDate" value="@startOfDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="EndDate">End Date:</label>
+                            <input type="datetime" class="form-control" id="EndDate" name="EndDate" value="@endOfDate">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Save</button>
+                    </form>
+                }
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Link tới các script cần thiết, bao gồm Bootstrap JS và jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        var StaffId = "@x.StaffId"; // Lấy giá trị IdentityUserId từ Razor và gán cho biến JavaScript
+
+        var selectStaff = document.querySelector('#StaffId');
+        var staffOptions = selectStaff.options;
+
+        for (var i = 0; i < staffOptions.length; i++) {
+            if (staffOptions[i].value == StaffId) {
+                staffOptions[i].selected = true;
+                break;
+            }
+        }
+        var ManagerId = "@x.ManagerId"; // Lấy giá trị IdentityUserId từ Razor và gán cho biến JavaScript
+
+        var selectElement = document.querySelector('#ManagerId');
+        var optionss = selectElement.options;
+
+        for (var i = 0; i < optionss.length; i++) {
+            if (optionss[i].value == ManagerId) {
+                optionss[i].selected = true;
+                break;
+            }
+        }
+        var SubjectId = "@x.SubjectId"; // Lấy giá trị IdentityUserId từ Razor và gán cho biến JavaScript
+
+        var selectSub = document.querySelector('#SubjectId');
+        var subOptions = selectSub.options;
+
+        for (var i = 0; i < subOptions.length; i++) {
+            if (subOptions[i].value == SubjectId) {
+                subOptions[i].selected = true;
+                break;
+            }
+        }
+    </script>
+
+</body>

@@ -1,0 +1,94 @@
+﻿@model eProject3.Models.Painting
+@{
+    ViewData["Title"] = "AddOrUpdatePainting";
+    Layout = "~/Views/Shared/_LayoutStudent.cshtml";
+    var x = new Painting();
+    //x = StudentRespository.GetByIdAsync(id);
+
+    if (Model != null)
+    {
+        x = Model;
+
+    }
+}
+<head>
+    <title>Add/Edit Movie</title>
+    <style>
+        /* Tùy chỉnh giao diện CSS ở đây */
+        .form-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .form-container h2 {
+                margin-bottom: 20px;
+            }
+    </style>
+</head>
+<body>
+    c=@Model
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 form-container">
+                <h2>Add/Edit Movie</h2>
+                @if (1 + 1 == 2)
+                {
+                    var id = x.Id;
+                    var code = x.Code;
+                    var name = x.Name;
+                    var description = x.Description;
+                    var condition = x.Conditions;
+                    var SubInClassId = x.StudentId;
+                    <form id="studentForm" method="POST" action="/Student/AddOrUpdatePainting" enctype="multipart/form-data">
+                        <input type="number" name="Id" value="@id" disabled>
+                        <div class="form-group">
+                            <label for="Code">Code:</label>
+                            <input type="text" class="form-control" id="Code" name="Code" value=" @code">
+                        </div>
+                        <div class="form-group">
+                            <label for="Name">Name:</label>
+                            <input type="text" class="form-control" id="Name" name="Name" value="@name">
+                        </div>
+                        <div class="form-group">
+                            <label for="Description">Description:</label>
+                            <input type="text" class="form-control" id="Description" name="Description" value="@description">
+                        </div>
+                        <div class="form-group">
+                            <label for="Conditions">Conditions:</label>
+                            <input type="text" class="form-control" id="Conditions" name="Conditions" value="@condition">
+                        </div>
+                        <div class="form-group">
+                            <label for="SubInClassId">SubInClassId:</label>
+                            <input type="int" class="form-control" id="SubInClassId" name="SubInClassId" value="@SubInClassId">
+                        </div>
+                        <div class="form-group">
+                            <label for="FileEntity">FileEntity:</label>
+                            <input type="file" class="form-control" id="FileEntity" name="FileEntity" value="@x.FileEntity">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Save</button>
+                    </form>
+                }
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Link tới các script cần thiết, bao gồm Bootstrap JS và jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function saveMovie() {
+            //var selectedGender = "gender";
+            //var genderSelect = document.getElementById("gender");
+            //for (var i = 0; i < genderSelect.options.length; i++) {
+            //    if (genderSelect.options[i].value === selectedGender) {
+            //        genderSelect.options[i].selected = true;
+            //        break;
+            //    }
+            //}
+            // Xử lý lưu dữ liệu ở đây
+        }
+    </script>
+</body>

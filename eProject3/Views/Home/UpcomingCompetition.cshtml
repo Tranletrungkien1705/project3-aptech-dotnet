@@ -1,0 +1,74 @@
+﻿@model IPagedList<eProject3.Models.Competition>;
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@using eProject3.Repository;
+@inject ICompetitionRepository competitionRepository
+@{
+    ViewData["Title"] = "Current Competitions";
+    Layout = "~/Views/Shared/_LayoutWEB.cshtml";
+    var competitions = await competitionRepository.GetAllPublicAsync();
+}
+<div class="header-mobile">
+    <a href="index.html" class="logo"><img src="~/public/vcca/images/wallpaperflare.com_wallpaper (1).jpg" alt="VCCA" /></a>
+</div>
+<main id="content" class="content-home content-about content-newmain">
+
+
+
+
+    <div class="slider-about">
+        <ul class="bxslider">
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(13\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(11\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+            <li style="background-image:url('../public/vcca/images/wallpaperflare.com_wallpaper\ \(2\).jpg');">
+                <a href="javascript:;"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="content-main"></div>
+        <div class="animated fade-in title-board">
+            <h2><span>Upcoming Competitons</span></h2>
+        </div>
+
+        <div class="home-section home-exhibitions">
+            <div class="row">
+                @foreach (Competition x in competitions)
+                {
+                    
+                        <div class="col-sm-4">
+                            <a href="/Home/CurrentPainting">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">@x.StartOfDate @x.EndOfDate</h5>
+                                        <p class="card-text"><i>@x.Name</i></p>
+                                        <p class="card-text">@x.Description</p>
+                                        <p class="card-text"><i>@x.Conditions</i></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <br><br>
+                                </div>
+                            </a>
+                        </div>
+                }
+            </div>
+
+
+        </div>
+
+
+
+        @*@Html.PagedListPager(Model, page=>Url.Action("UpcomingCompetition",new{page}))*@
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+</main>
