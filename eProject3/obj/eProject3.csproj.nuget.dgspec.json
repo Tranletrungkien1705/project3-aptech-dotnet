@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROJECTS IN APTECH\\eProject3\\eProject3\\eProject3\\eProject3.csproj": {}
+    "D:\\idocNet\\_labs\\project3-aptech-dotnet\\eProject3\\eProject3.csproj": {}
   },
   "projects": {
-    "D:\\PROJECTS IN APTECH\\eProject3\\eProject3\\eProject3\\eProject3.csproj": {
+    "D:\\idocNet\\_labs\\project3-aptech-dotnet\\eProject3\\eProject3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROJECTS IN APTECH\\eProject3\\eProject3\\eProject3\\eProject3.csproj",
+        "projectUniqueName": "D:\\idocNet\\_labs\\project3-aptech-dotnet\\eProject3\\eProject3.csproj",
         "projectName": "eProject3",
-        "projectPath": "D:\\PROJECTS IN APTECH\\eProject3\\eProject3\\eProject3\\eProject3.csproj",
+        "projectPath": "D:\\idocNet\\_labs\\project3-aptech-dotnet\\eProject3\\eProject3.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\PROJECTS IN APTECH\\eProject3\\eProject3\\eProject3\\obj\\",
+        "outputPath": "D:\\idocNet\\_labs\\project3-aptech-dotnet\\eProject3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,7 +57,7 @@
               "target": "Package",
               "version": "[6.0.11, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[6.0.11, )"
             },
@@ -99,6 +99,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -107,7 +121,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\dotnet-sdk8\\sdk\\8.0.423\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,126 +1,87 @@
-﻿@page
+@page
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
-    Layout = "/Views/Shared/_LayoutWEB.cshtml";
+    ViewData["Title"] = "Đăng nhập";
+    Layout = null;
 }
-
-
-@*
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Star Admin2 </title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="../../vendors/feather/feather.css">
-    <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="../../vendors/typicons/typicons.css">
-    <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
-    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
-    <!-- endinject -->
-    <link rel="shortcut icon" href="../../images/favicon.png" />
-</head>*@
-<h1>@ViewData["Title"]</h1>
-<main id="content" class="content-home content-about content-newmain">
-    <div class="container">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Đăng nhập — Student Management</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root { --brand:#4f46e5; --brand2:#7c3aed; --ink:#1e293b; }
+  * { box-sizing:border-box; }
+  body {
+    min-height:100vh; margin:0; display:flex; align-items:center; justify-content:center; padding:24px;
+    font-family:"Sora",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased; color:var(--ink);
+    background:
+      radial-gradient(820px 480px at 50% -12%, rgba(124,58,237,.28), transparent 60%),
+      radial-gradient(900px 520px at 50% 120%, rgba(79,70,229,.30), transparent 60%),
+      #0f172a;
+  }
+  .login-box { background:#fff; border-radius:16px; padding:38px 34px; width:380px; max-width:100%;
+    box-shadow:0 24px 70px rgba(2,6,23,.55); }
+  .logo { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center;
+    color:#fff; font-size:26px; background:linear-gradient(135deg,var(--brand),var(--brand2));
+    box-shadow:0 8px 20px rgba(79,70,229,.4); margin-bottom:16px; }
+  .brand { font-size:22px; font-weight:800; letter-spacing:-.01em; margin:0; }
+  .sub { color:#64748b; font-size:13px; margin:2px 0 22px; }
+  .form-floating > label { color:#94a3b8; }
+  .form-control { border-radius:10px; padding:.7rem .9rem; }
+  .form-control:focus { border-color:var(--brand); box-shadow:0 0 0 .2rem rgba(79,70,229,.18); }
+  .btn-brand { background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#fff; border:none;
+    padding:11px; font-weight:600; border-radius:10px; }
+  .btn-brand:hover { filter:brightness(1.06); color:#fff; }
+  .demo { font-size:12px; background:#f1f5f9; border-radius:10px; padding:11px 13px; margin-top:20px; color:#475569; }
+  .demo .lbl { font-size:10px; text-transform:uppercase; letter-spacing:1.5px; color:#94a3b8; font-weight:700; margin-bottom:4px; }
+  a { color:var(--brand); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+<div class="login-box">
+  <div class="logo"><i class="bi bi-mortarboard-fill"></i></div>
+  <h1 class="brand">Student Management</h1>
+  <p class="sub">Hệ thống quản lý sinh viên &amp; cuộc thi mỹ thuật</p>
 
+  <form id="account" method="post">
+    <div asp-validation-summary="ModelOnly" class="alert alert-danger py-2 px-3 mb-3" style="font-size:13px"></div>
 
-        <div class="row">
-            <div class="col-md-4">
-                <section>
-                    <form id="account" method="post">
-                        <h2>Use a local account to log in.</h2>
-                        <hr />
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <div class="form-floating">
-                            <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
-                            <label asp-for="Input.Email" class="form-label"></label>
-                            <span asp-validation-for="Input.Email" class="text-danger"></span>
-                        </div>
-                        <div class="form-floating">
-                            <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
-                            <label asp-for="Input.Password" class="form-label"></label>
-                            <span asp-validation-for="Input.Password" class="text-danger"></span>
-                        </div>
-                        <div>
-                            <div class="checkbox">
-                                <label asp-for="Input.RememberMe" class="form-label">
-                                    <input class="form-check-input" asp-for="Input.RememberMe" />
-                                    @Html.DisplayNameFor(m => m.Input.RememberMe)
-                                </label>
-                            </div>
-                        </div>
-                        <div>
-                            <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
-                        </div>
-                        <div>
-                            <p>
-                                <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
-                            </p>
-                            <p>
-                                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
-                            </p>
-                            <p>
-                                <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
-                            </p>
-                        </div>
-                    </form>
-                </section>
-            </div>
-            <div class="col-md-6 col-md-offset-2">
-                <section>
-                    <h3>Use another service to log in.</h3>
-                    <hr />
-                    @{
-                        if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                        {
-                            <div>
-                                <p>
-                                    There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">
-                                        article
-                                        about setting up this ASP.NET application to support logging in via external services
-                                    </a>.
-                                </p>
-                            </div>
-                        }
-                        else
-                        {
-                            <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                                <div>
-                                    <p>
-                                        @foreach (var provider in Model.ExternalLogins!)
-                                        {
-                                            <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                        }
-                                    </p>
-                                </div>
-                            </form>
-                        }
-                    }
-                </section>
-            </div>
-        </div>
+    <div class="form-floating mb-3">
+      <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="email" />
+      <label asp-for="Input.Email">Email</label>
+      <span asp-validation-for="Input.Email" class="text-danger" style="font-size:12px"></span>
     </div>
-    @*<script src="../../vendors/js/vendor.bundle.base.js"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <script src="../../vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
-    <script src="../../js/off-canvas.js"></script>
-    <script src="../../js/hoverable-collapse.js"></script>
-    <script src="../../js/template.js"></script>
-    <script src="../../js/settings.js"></script>
-    <script src="../../js/todolist.js"></script>*@
-</main>
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
+    <div class="form-floating mb-3">
+      <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="mật khẩu" />
+      <label asp-for="Input.Password">Mật khẩu</label>
+      <span asp-validation-for="Input.Password" class="text-danger" style="font-size:12px"></span>
+    </div>
+    <div class="d-flex justify-content-between align-items-center mb-3" style="font-size:13px">
+      <label class="d-flex align-items-center gap-2 mb-0">
+        <input class="form-check-input mt-0" asp-for="Input.RememberMe" /> Ghi nhớ đăng nhập
+      </label>
+      <a asp-page="./ForgotPassword">Quên mật khẩu?</a>
+    </div>
+    <button id="login-submit" type="submit" class="btn btn-brand w-100">Đăng nhập</button>
+  </form>
+
+  <div class="demo">
+    <div class="lbl">Tài khoản demo</div>
+    <div><code>admin@sms.com</code> / <code>Admin@123</code> <span class="badge" style="background:var(--brand);font-size:10px">Admin</span></div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@4.0.0/dist/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
