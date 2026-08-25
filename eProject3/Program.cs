@@ -14,11 +14,13 @@ internal class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        // Cloud host (Render) cấp cổng qua biến PORT; local mặc định 8080
+        builder.WebHost.UseUrls($"http://0.0.0.0:{Environment.GetEnvironmentVariable("PORT") ?? "8080"}");
 
         // Add services to the container.
         var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
         builder.Services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(connectionString));
+            options.UseSqlite(connectionString));
 
         builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -67,6 +69,24 @@ internal class Program
         });
         var app = builder.Build();
 
+        // Khởi tạo DB (SQLite) + seed roles + admin user lúc startup (cloud không có DB sẵn)
+        using (var scope = app.Services.CreateScope())
+        {
+            var sp = scope.ServiceProvider;
+            sp.GetRequiredService<ApplicationDbContext>().Database.EnsureCreated();
+            var roleMgr = sp.GetRequiredService<RoleManager<IdentityRole>>();
+            foreach (var r in new[] { "ADMIN", "MANAGER", "STAFF", "STUDENT" })
+                if (!roleMgr.RoleExistsAsync(r).GetAwaiter().GetResult())
+                    roleMgr.CreateAsync(new IdentityRole { Name = r, NormalizedName = r }).GetAwaiter().GetResult();
+            var userMgr = sp.GetRequiredService<UserManager<CustomUser>>();
+            if (userMgr.FindByEmailAsync("admin@sms.com").GetAwaiter().GetResult() == null)
+            {
+                var u = new CustomUser { UserName = "admin@sms.com", Email = "admin@sms.com", EmailConfirmed = true };
+                if (userMgr.CreateAsync(u, "Admin@123").GetAwaiter().GetResult().Succeeded)
+                    userMgr.AddToRoleAsync(u, "ADMIN").GetAwaiter().GetResult();
+            }
+        }
+
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {
@@ -79,7 +99,6 @@ internal class Program
             app.UseHsts();
         }
 
-        app.UseHttpsRedirection();
         app.UseStaticFiles();
 
         //app.UseRouting();
@@ -91,6 +110,7 @@ internal class Program
             name: "default",
             pattern: "{controller=Home}/{action=Index}/{id?}");
         app.MapRazorPages();
+        app.MapGet("/healthz", () => "ok");
         app.UseSwagger();
         app.UseSwaggerUI(c =>
         {
